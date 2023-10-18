@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="frame">
+            <div class="writingPlace">
+                <div class="place1"></div>
+                <div class="place2"></div>
+            </div>
+            <div class="keypads">
+                <button onclick="writeNumber('1')">1</button>
+                <button onclick="writeNumber('2')">2</button>
+                <button onclick="writeNumber('3')">3</button>
+                <button onclick="writeNumber('4')">4</button>
+                <button onclick="writeNumber('5')">5</button>
+                <button onclick="writeNumber('6')">6</button>
+                <button onclick="writeNumber('7')">7</button>
+                <button onclick="writeNumber('8')">8</button>
+                <button onclick="writeNumber('9')">9</button>
+                <button onclick="writeNumber('0')">0</button>
+                <button onclick="writeQuestion('+')">+</button>
+                <button onclick="writeQuestion('-')">-</button>
+                <button onclick="writeQuestion('x')">x</button>
+                <button onclick="writeQuestion('/')">/</button>
+                <button onclick="writeNumber('.')">.</button>
+                <button onclick="writeAnswer()">=</button>
+                <button onclick="clearPlace()">C</button>
+                <button onclick="ceButton()">CE</button>
+            </div>
+        </div>
+        
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
