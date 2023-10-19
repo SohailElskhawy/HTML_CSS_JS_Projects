@@ -1,0 +1,183 @@
+*{
+    user-select: none;
+}
+body{
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    background-image: linear-gradient( 135deg, #6B73FF 10%, #000DFF 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title h1{
+    font-size: 65px;
+    font-family: monospace;
+    position: relative;
+    top: -50px;
+    /* text-shadow: 
+    0.025em 0.025em 0 yellow,
+    0.05em 0.05em 0 blue,
+    0.075em 0.075em 0 red,
+    0.1em 0.1em 0 black; */
+    color: #ffffff;
+}
+
+.game{
+    width: 600px;
+    height: 400px;
+    background-color: rgba(240, 248, 255, 0.321);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question{
+    font-size: 40px;
+    font-family: monospace;
+}
+
+.choicesCont{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 25px;
+    column-gap: 35px;
+}
+
+.choicesCont button{
+    width:150px;
+    height: 70px;
+    background-color: #6B73FF;
+    font-size: 35px;
+    font-family: monospace;
+    font-weight: 900;
+    border-radius: 70px;
+    outline: 0;
+    border: 1px solid;
+}
+
+.choicesCont button:hover{
+    background-color: #ffffff;
+}
+.game{
+    display: none;
+}
+
+.startScreen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+}
+.startScreen button {
+    width: 700px;
+    height: 150px;
+    border-radius: 70px;
+    font-family: monospace;
+    font-size: 55px;
+    border: #6B73FF 4px solid;
+    background-color: #252ba6;
+    color: #ffffff;
+}
+
+.startScreen button:hover{
+    background-color: #ffffff;
+    color: black;
+}
+
+
+.difficultySelectScreen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 25px;
+}
+
+.difficultySelectScreen button{
+    width: 240px;
+    height: 80px;
+    border-radius: 70px;
+    font-family: monospace;
+    font-size: 40px;
+    border: #6B73FF 4px solid;
+    background-color: #252ba6;
+    color: #ffffff;
+}
+
+.difficultySelectScreen button:hover{
+    background-color: #ffffff;
+    color: black;
+}
+
+.difficultySelectScreen h1{
+    font-size: 30px;
+    font-family: monospace;
+    position: relative;
+    top: -50px;
+    color: white;
+    /* text-shadow: 
+    0.025em 0.025em 0 rgb(255, 255, 255),
+    0.05em 0.05em 0 rgb(255, 255, 255),
+    0.075em 0.075em 0 rgb(255, 255, 255),
+    0.1em 0.1em 0 rgb(0, 0, 0); */
+}
+
+.difficultySelectScreen{
+    display: none;
+}
+
+
+#userPoints {
+    font-family: monospace;
+    font-size: 35px;
+    margin: 10px 350px 0 0;
+}
+
+#userTime{
+    font-family: monospace;
+    font-size: 35px;
+    margin: -40px 0px 0 350px;
+}
+
+/* Show Stuff and Hide it  For Testing*/
+
+/* .game{
+    display: none;
+}
+.startScreen{
+    display: none;
+} */
+
+.gameOverScreen{
+    width: 600px;
+    height: 400px;
+    background-color: rgba(240, 248, 255, 0.321);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: monospace;
+    font-size: 30px;
+}
+
+.gameOverScreen button {
+    width:250px;
+    height: 100px;
+    background-color: #565de0;
+    font-size: 35px;
+    font-family: monospace;
+    font-weight: 900;
+    border-radius: 70px;
+    outline: 0;
+    border: 1px solid;
+}
+
+.gameOverScreen button:hover{
+    background-color: #ffffff;
+    color: black;
+}
+.gameOverScreen{
+    display: none;
+}
