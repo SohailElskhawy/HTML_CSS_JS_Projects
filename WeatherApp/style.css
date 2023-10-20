@@ -48,6 +48,7 @@ text-align: center;
     height: 20px;
     border-radius: 150px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
 }
 .appHeader button{
     width: 110px;
