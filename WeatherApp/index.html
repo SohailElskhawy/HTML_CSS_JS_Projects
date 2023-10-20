@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="errorPopUp">
+        <h1>Weather App</h1>
+        <h1>Invalid City Name<br> Please Enter a City Name</h1>
+    </div>
+    <div class="appHeader">
+        <h1 id="cityNameTitle"></h1>
+        <div class="searchBar">
+            <input type="text" id="cityNameInput">
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="todayInfo"> 
+            <h1 id="todayTitle"></h1>
+            <img src="./assets/clear-day.svg" id="weatherTodayIcon">
+            <div class="tempInfo">
+                <h2 id="todayTemp"></h2>
+                <h2 id="todayWeather"></h2>
+            </div>
+        </div>
+        <div class="otherdays">
+            <div>
+                <p id="day0"></p>
+                <img src="" width="50px" id="day0Icon">
+                <p id="day0Temp"></p>
+            </div>
+            <div>
+                <p id="day1"></p>
+                <img src="" width="50px" id="day1Icon">
+                <p id="day1Temp"></p>
+            </div>
+            <div>
+                <p id="day2"></p>
+                <img src="" width="50px" id="day2Icon">
+                <p id="day2Temp"></p>
+            </div>
+            <div>
+                <p id="day3"></p>
+                <img src=" width="50px" id="day3Icon">
+                <p id="day3Temp"></p>
+            </div>
+            <div>
+                <p id="day4">Thu</p>
+                <img src="" width="50px" id="day4Icon">
+                <p id="day4Temp"></p>
+            </div>
+
+            
+        </div>
+    </div>
+    
+    
+    <script src="./main.js"></script>
+</body>
+</html>
