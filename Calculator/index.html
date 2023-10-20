@@ -9,29 +9,38 @@
 <body>
     <div class="calculator">
         <div class="frame">
-            <div class="writingPlace">
-                <div class="place1"></div>
-                <div class="place2"></div>
-            </div>
+            <div class="writingPlace"></div>
             <div class="keypads">
-                <button onclick="writeNumber('1')">1</button>
-                <button onclick="writeNumber('2')">2</button>
-                <button onclick="writeNumber('3')">3</button>
-                <button onclick="writeNumber('4')">4</button>
-                <button onclick="writeNumber('5')">5</button>
-                <button onclick="writeNumber('6')">6</button>
-                <button onclick="writeNumber('7')">7</button>
-                <button onclick="writeNumber('8')">8</button>
-                <button onclick="writeNumber('9')">9</button>
-                <button onclick="writeNumber('0')">0</button>
-                <button onclick="writeQuestion('+')">+</button>
-                <button onclick="writeQuestion('-')">-</button>
-                <button onclick="writeQuestion('x')">x</button>
-                <button onclick="writeQuestion('/')">/</button>
-                <button onclick="writeNumber('.')">.</button>
-                <button onclick="writeAnswer()">=</button>
-                <button onclick="clearPlace()">C</button>
-                <button onclick="ceButton()">CE</button>
+                <div class="row1">
+                    <button onclick="clearPlace()">C</button>
+                    <button onclick="deButton()">DE</button>
+                    <button class="number">.</button>
+                    <button class="number">/</button>
+                </div>
+                <div class="row2">
+                    <button class="number">7</button>
+                    <button class="number">8</button>
+                    <button class="number">9</button>
+                    <button class="number">*</button>
+                </div>
+                <div class="row3">
+                    <button class="number">4</button>
+                    <button class="number">5</button>
+                    <button class="number">6</button>
+                    <button class="number">-</button>
+                </div>
+                <div class="row4">
+                    <button class="number">1</button>
+                    <button class="number">2</button>
+                    <button class="number">3</button>
+                    <button class="number">+</button>
+                </div>
+                <div class="row2">
+                    <button class="number">00</button>
+                    <button class="number">0</button>
+                    <button id="equal" onclick="writeAnswer()">=</button>
+                    
+                </div>
             </div>
         </div>
         
