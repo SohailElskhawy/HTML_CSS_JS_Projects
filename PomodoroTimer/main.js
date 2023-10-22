@@ -42,6 +42,7 @@ function but1(){
     document.querySelector(".startButton").style.display = 'block';
     document.querySelector('.startButton').style.color = 'rgb(186, 73, 73)';
     document.querySelector(".pauseButton").style.display = 'none';
+    document.querySelector(".pauseButton").style.color = 'rgb(186, 73, 73)';
 }
 
 
@@ -58,6 +59,7 @@ function but2(){
     document.querySelector(".startButton").style.display = 'block';
     document.querySelector('.startButton').style.color = 'rgb(56, 133, 138)';
     document.querySelector(".pauseButton").style.display = 'none';
+    document.querySelector(".pauseButton").style.color = 'rgb(56, 133, 138)';
 }
 
 function but3(){
@@ -73,6 +75,7 @@ function but3(){
     document.querySelector(".startButton").style.display = 'block';
     document.querySelector('.startButton').style.color = 'rgb(57, 112, 151)';
     document.querySelector(".pauseButton").style.display = 'none';
+    document.querySelector(".pauseButton").style.color = 'rgb(57, 112, 151)';
 }
 
 let realSeconds;
