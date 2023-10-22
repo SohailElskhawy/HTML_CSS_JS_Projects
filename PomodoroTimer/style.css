@@ -1,0 +1,175 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(186, 73, 73);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 60px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+*{
+    user-select: none;
+}
+button{
+    cursor: pointer;
+}
+.navBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 100px;
+    color: #fff;
+    font-family: monospace;
+}
+.navBar button{
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    font-family: monospace;
+    background-color: #ffffff53;
+    color: #fff;
+    font-weight: 900;
+    border: solid 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.timerScreen{
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    height: 400px;
+}
+
+.timesButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 25px;
+}
+.timesButtons button{
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    font-family: monospace;
+    background-color: #ffffff00;
+    color: #fff;
+    font-weight: 900;
+    border: solid 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.time{
+    font-size: 45px;
+    color: #fff;
+    font-family: monospace;
+    font-weight: 900;
+}
+
+.startButton{
+    width: 120px;
+    height: 50px;
+    font-size: 25px;
+    font-family: monospace;
+    background-color: #ffffff;
+    color: rgb(186, 73, 73);
+    font-weight: 900;
+    border: solid 0;
+    cursor: pointer;
+    text-align: center;
+}
+#pomodoroBut{
+    background-color: rgba(0, 0, 0, 0.467);
+}
+
+.sittingsScreen{
+    background-color: #ffffffc7;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    font-family: monospace;
+    width: 500px;
+    height: 250px;
+    padding: 20px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 350px;
+}
+
+.timersInputs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 35px;
+    border-bottom: 1px solid;
+}
+
+.timeSetting{
+    display: flex;
+    flex-direction: column;
+}
+
+.longBreakInput{
+    margin-left: 30px;
+    margin-top: 20px;
+    border-bottom: 1px solid;
+}
+
+
+.sittingsScreen{
+    display: none;
+}
+
+.timeSetting label{
+    font-size: 20px;
+    font-weight: 900;
+    
+}
+
+.timeSetting input{
+    width: 40px;
+    font-size: large;
+}
+
+.sittingsScreen .navbar  button{
+    width: 50px;
+    height: 30px;
+    font-size: large;
+    text-align: center;
+    font-weight: 900;
+    font-family: monospace;
+}
+
+.pauseButton{
+    width: 120px;
+    height: 50px;
+    font-size: 25px;
+    font-family: monospace;
+    background-color: #ffffff;
+    color: rgb(186, 73, 73);
+    font-weight: 900;
+    border: solid 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.pauseButton{
+    display:none;
+}
+
+#pomodoroCounter{
+    color: #fff;
+    font-family: monospace;
+    font-size: 20px;
+}

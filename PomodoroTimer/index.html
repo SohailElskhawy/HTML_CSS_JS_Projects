@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navBar">
+        <h1>Pomodoro Timer<h1>
+        <button onclick="settingsBut()">Settings</button>
+    </div>
+    <div class="timerScreen">
+        <div class="timesButtons">
+            <button id="pomodoroBut" onclick="but1()">Pomodoro</button>
+            <button id="breakBut" onclick="but2()">Short Break</button>
+            <button id="longBreakBut" onclick="but3()">Long Break</button>
+        </div>
+        <div class="time">
+            <h1 class="timeClock">25:00</h1>
+        </div>
+        <button class="startButton" onclick="startTime()">Start</button>
+        <button class="pauseButton" onclick="pauseTime()">Pause</button>
+        <h3 id="pomodoroCounter">Pomodoro: 1</h3>
+    </div>
+
+    <div class="sittingsScreen">
+        <div class="navbar">
+            <h3>Settings</h3>
+            <button onclick="saveButton()">X</button>
+        </div>
+        <div class="timeSetting">
+            <h3>Time(Minutes)</h3>
+            <div class="timersInputs">
+                <label>Pomodoro <input type="number" value="25" max="60" min="0" id="pomodoroM"></label>
+                <label>Short Break <input type="number" value="5" max="15"  min="0" id="breakM"></label>
+                <label>Long Break <input type="number" value="15" max="25"  min="0" id="longBreakM"></label>
+            </div>
+            <br>
+            <br>
+            <label class="longBreakInput">Long Break After <input type="number" value="4" max="8"  min="0" id="pomodorosCount"> Pomodoros</label>
+
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
