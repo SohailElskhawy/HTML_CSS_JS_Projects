@@ -3,10 +3,9 @@ let isTiming;
 let settingsSeconds;
 document.addEventListener('DOMContentLoaded', () =>{
     pomodoros = 1;
-    document.querySelector('#pomodoroBut').style.backgroundColor = 'rgba(0, 0, 0, 0.467)';
+    but1();
     document.querySelector('#pomodoroCounter').innerHTML = `Pomodoro : ${pomodoros}`
     isTiming = false;
-    settingsSeconds = Number(document.querySelector('#pomodoroM').value) * 60;
 });
 
 function settingsBut(){
@@ -50,7 +49,7 @@ function but2(){
     let seconds = Number(document.querySelector('#breakM').value) * 60;
     let minutes = Math.floor(seconds / 60)
     let secondsLeft = seconds % 60
-    settingsSeconds = Number(document.querySelector('#pomodoroM').value) * 60;
+    settingsSeconds = Number(document.querySelector('#breakM').value) * 60;
     document.querySelector('#pomodoroBut').style.backgroundColor = '#ffffff00';
     document.querySelector('#longBreakBut').style.backgroundColor = '#ffffff00';
     document.querySelector('#breakBut').style.backgroundColor = 'rgba(0, 0, 0, 0.467)';
@@ -66,7 +65,7 @@ function but3(){
     let seconds = Number(document.querySelector('#longBreakM').value) * 60;
     let minutes = Math.floor(seconds / 60)
     let secondsLeft = seconds % 60
-    settingsSeconds = Number(document.querySelector('#pomodoroM').value) * 60;
+    settingsSeconds = Number(document.querySelector('#longBreakM').value) * 60;
     document.querySelector('#pomodoroBut').style.backgroundColor = '#ffffff00';
     document.querySelector('#longBreakBut').style.backgroundColor = 'rgba(0, 0, 0, 0.467)';
     document.querySelector('#breakBut').style.backgroundColor = '#ffffff00';
