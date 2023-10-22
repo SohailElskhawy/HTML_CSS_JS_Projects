@@ -1,4 +1,4 @@
-const myApi = '127668cb06e0b6c8af20839acf37c129'
+const myApi = "" // here you put the api
 
 let globalData;
 async function searchButton() {
