@@ -3,7 +3,7 @@ let isTiming;
 let settingsSeconds;
 document.addEventListener('DOMContentLoaded', () =>{
     pomodoros = 1;
-    but1();
+    pomodoroBut();
     document.querySelector('#pomodoroCounter').innerHTML = `Pomodoro : ${pomodoros}`
     isTiming = false;
 });
@@ -20,15 +20,15 @@ function saveButton(){
     const settingsPopUp = document.querySelector('.sittingsScreen');
     settingsPopUp.style.display = 'none'
     if (backgroundColor == 'rgb(186, 73, 73)'){
-        but1();
+        pomodoroBut();
     }else if (backgroundColor == 'rgb(56, 133, 138)'){
-        but2();
+        shortBreakBut();
     }else if (backgroundColor == 'rgb(57, 112, 151)'){
-        but3();
+        longBreakBut();
     }
 }
 
-function but1(){
+function pomodoroBut(){
     let seconds = Number(document.querySelector('#pomodoroM').value) * 60;
     let minutes = Math.floor(seconds / 60);
     let secondsLeft = seconds % 60;
@@ -45,7 +45,7 @@ function but1(){
 }
 
 
-function but2(){
+function shortBreakBut(){
     let seconds = Number(document.querySelector('#breakM').value) * 60;
     let minutes = Math.floor(seconds / 60);
     let secondsLeft = seconds % 60;
@@ -61,7 +61,7 @@ function but2(){
     document.querySelector(".pauseButton").style.color = 'rgb(56, 133, 138)';
 }
 
-function but3(){
+function longBreakBut(){
     let seconds = Number(document.querySelector('#longBreakM').value) * 60;
     let minutes = Math.floor(seconds / 60);
     let secondsLeft = seconds % 60;
@@ -132,16 +132,16 @@ function tikTak(seconds){
         sound.play();
 
         if (backgroundColor == 'rgb(186, 73, 73)'){
-            but2(); 
+            shortBreakBut(); 
         }else if (backgroundColor == 'rgb(56, 133, 138)'){
             if (pomodoros != document.querySelector('#pomodorosCount').value){
                 pomodoros += 1;
-                but1();
+                pomodoroBut();
             }else{
-                but3();
+                longBreakBut();
             }
         }else if (backgroundColor == 'rgb(57, 112, 151)'){
-            but1();
+            pomodoroBut();
             pomodoros = 1;
         }
         document.querySelector('#pomodoroCounter').innerHTML = `Pomodoro : ${pomodoros}`
