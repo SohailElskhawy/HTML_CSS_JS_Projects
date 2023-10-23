@@ -20,7 +20,7 @@ function saveButton(){
     const settingsPopUp = document.querySelector('.sittingsScreen');
     settingsPopUp.style.display = 'none'
     if (backgroundColor == 'rgb(186, 73, 73)'){
-        but1() 
+        but1();
     }else if (backgroundColor == 'rgb(56, 133, 138)'){
         but2();
     }else if (backgroundColor == 'rgb(57, 112, 151)'){
@@ -30,8 +30,8 @@ function saveButton(){
 
 function but1(){
     let seconds = Number(document.querySelector('#pomodoroM').value) * 60;
-    let minutes = Math.floor(seconds / 60)
-    let secondsLeft = seconds % 60
+    let minutes = Math.floor(seconds / 60);
+    let secondsLeft = seconds % 60;
     settingsSeconds = Number(document.querySelector('#pomodoroM').value) * 60;
     document.querySelector('#longBreakBut').style.backgroundColor = '#ffffff00';
     document.querySelector('#breakBut').style.backgroundColor  = '#ffffff00';
@@ -47,8 +47,8 @@ function but1(){
 
 function but2(){
     let seconds = Number(document.querySelector('#breakM').value) * 60;
-    let minutes = Math.floor(seconds / 60)
-    let secondsLeft = seconds % 60
+    let minutes = Math.floor(seconds / 60);
+    let secondsLeft = seconds % 60;
     settingsSeconds = Number(document.querySelector('#breakM').value) * 60;
     document.querySelector('#pomodoroBut').style.backgroundColor = '#ffffff00';
     document.querySelector('#longBreakBut').style.backgroundColor = '#ffffff00';
@@ -63,8 +63,8 @@ function but2(){
 
 function but3(){
     let seconds = Number(document.querySelector('#longBreakM').value) * 60;
-    let minutes = Math.floor(seconds / 60)
-    let secondsLeft = seconds % 60
+    let minutes = Math.floor(seconds / 60);
+    let secondsLeft = seconds % 60;
     settingsSeconds = Number(document.querySelector('#longBreakM').value) * 60;
     document.querySelector('#pomodoroBut').style.backgroundColor = '#ffffff00';
     document.querySelector('#longBreakBut').style.backgroundColor = 'rgba(0, 0, 0, 0.467)';
@@ -97,12 +97,9 @@ function startTime(){
         }
         tikTak(seconds);
     }else if (realSeconds < settingsSeconds){
-        isTiming = true;
         tikTak(realSeconds);
     }
     
-    console.log(settingsSeconds);
-    console.log(realSeconds);
 }
 
 function tikTak(seconds){
@@ -135,11 +132,10 @@ function tikTak(seconds){
         sound.play();
 
         if (backgroundColor == 'rgb(186, 73, 73)'){
-            pomodoros += 1;
-            document.querySelector('#pomodoroCounter').innerHTML = `Pomodoro : ${pomodoros}`
             but2(); 
         }else if (backgroundColor == 'rgb(56, 133, 138)'){
             if (pomodoros != document.querySelector('#pomodorosCount').value){
+                pomodoros += 1;
                 but1();
             }else{
                 but3();
@@ -148,7 +144,8 @@ function tikTak(seconds){
             but1();
             pomodoros = 1;
         }
-    }
+        document.querySelector('#pomodoroCounter').innerHTML = `Pomodoro : ${pomodoros}`
+    }   
 
 }
 
@@ -156,8 +153,6 @@ function pauseTime(){
     isTiming = false;
     document.querySelector(".startButton").style.display = 'block';
     document.querySelector(".pauseButton").style.display = 'none';
-    console.log(settingsSeconds);
-    console.log(realSeconds);
 }
 
 
