@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&family=Roboto:wght@300&family=Space+Mono&display=swap');
+
+body{
+  background-image: linear-gradient( 135deg, #97ABFF 10%, #123597 100%);
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  font-size: 20px;
+}
+
+*{
+  font-family: 'Metal Mania';
+  user-select: none;
+}
+
+canvas {
+  border-bottom: 10px solid;
+  border-top: 10px solid;
+  background-color: rgba(0, 0, 255, 0.237);
+}
+
+.scoreBoard{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  column-gap: 150px;
+  text-align: center;
+  background-color: #12359711;
+  width: 400px;
+  margin-bottom: 10px;
+  border-radius: 75px;
+}
+
+.startScreen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #12359711;
+  width: 300px;
+  padding: 20px;
+  border-radius: 45px;
+}
+
+.startScreen button{
+  height: 50px;
+  border-radius: 45px;
+  font-size: 33px;
+  text-align: center;
+  width: 290px;
+  cursor: pointer;
+  background-color: #12359795;
+  color: white;
+}
+
+.startScreen button:hover{
+  background-color: white;
+  color: black;
+}
