@@ -68,20 +68,7 @@ body{
     row-gap: 5px;
 }
 
-.popUp{
-    background-color: #316022bf;
-    width: 300px;
-    height: 300px;
-    position: fixed;
-    top: 38%;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    row-gap: 25px;
-    border-radius: 25px;
-}
-.popUp button{
+.playAgainBut{
     width: 185px;
     height: 75px;
     border: 0;
@@ -91,26 +78,20 @@ body{
     background-color: #ffffff7b;
 }
 
-.popUp button:hover{
+.playAgainBut:hover{
     background-color: #000000b8;
     color: white;
 }
-.popUp{
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #316022bf;
-    padding: 20px;
-    z-index: 1000;
-}
 
-.popUpTitle{
-    font-size: 45px;
-    color: #fff;
-}
 
 .turn h3{
     font-size: 30px;
 }
+
+.winnerTitle{
+    display: none;
+}
+.playAgainBut{
+    display: none;
+}
+

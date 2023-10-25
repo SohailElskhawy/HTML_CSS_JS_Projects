@@ -92,31 +92,39 @@ function checkWinner(){
 
 
 function tie() {
+    document.querySelector('.mainGame').style.display = 'none';
     document.querySelector('.turn h3').innerHTML = "";
-    document.querySelector('.popUp').style.display = 'block';
-    document.querySelector('.popUpTitle').innerHTML = 'Its a tie';
+    document.querySelector('.winnerTitle').style.display = 'block';
+    document.querySelector('.winnerTitle').innerHTML = 'Its a tie';
+    document.querySelector('.playAgainBut').style.display = 'block';
 }
 
 function xWins(){
+    document.querySelector('.mainGame').style.display = 'none';
     document.querySelector('.turn h3').innerHTML = "";
     document.body.style.backgroundImage = 'linear-gradient( 135deg, #52E5E7 10%, #130CB7 100%)'
-    document.querySelector('.popUp').style.display = 'block';
-    document.querySelector('.popUpTitle').innerHTML = 'X wins'
+    document.querySelector('.winnerTitle').style.display = 'block';
+    document.querySelector('.winnerTitle').innerHTML = 'X wins'
+    document.querySelector('.playAgainBut').style.display = 'block';
 
 
 }
 
 function oWins(){
+    document.querySelector('.mainGame').style.display = 'none';
     document.querySelector('.turn h3').innerHTML = "";
     document.body.style.backgroundImage = 'linear-gradient( 135deg, #FEC163 10%, #DE4313 100%)'
-    document.querySelector('.popUp').style.display = 'block';
-    document.querySelector('.popUpTitle').innerHTML = 'O wins'
+    document.querySelector('.winnerTitle').style.display = 'block';
+    document.querySelector('.winnerTitle').innerHTML = 'O wins'
+    document.querySelector('.playAgainBut').style.display = 'block';
 
 }
 
 function newGame(){
+    document.querySelector('.mainGame').style.display = 'flex';
+    document.querySelector('.winnerTitle').style.display = 'none';
+    document.querySelector('.playAgainBut').style.display = 'none';
     turn = 1;
-    document.querySelector('.popUp').style.display = 'none';
     allButtons.forEach(but => {
         but.innerHTML = '';
     })
