@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Arvo:wght@700&family=Indie+Flower&family=Metal+Mania&family=Roboto:wght@300&family=Space+Mono&display=swap');
+
+body{
+background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+margin: 0;
+padding: 0;
+transition: background-image 0.5s ease-in-out;
+}
+
+*{
+    font-family: 'Anton';
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+}
+
+.choiceGameMode{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.choiceGameMode button{
+    font-size: 24px;
+    border: 0;
+    border-radius: 15px;
+    background-color: #FAD961;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.choiceGameMode button:hover{
+    background-color: #F76B1C;
+    color: white;
+}
+
+.choiceGameMode{
+    display: none; /*remove this*/
+}
+
+.mainGame{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 25px;
+}
+
+.hintCont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.game{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#label{
+    font-size: 27px;
+    background-color: rgba(0, 0, 0, 0.208);
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    padding: 5px;
+}
+
+.hintButton{
+    background-color: #F76B1C;
+    font-size: 18px;
+    border: 0;
+    border-radius: 15px;
+    background-color: #FAD961;
+    padding: 10px;
+    cursor: pointer;
+}
+.hintButton:hover{
+    background-color: #F76B1C;
+    color: white;
+}
+
+.guessBut{
+    background-color: #F76B1C;
+    font-size: 18px;
+    border: 0;
+    border-radius: 15px;
+    background-color: #FAD961;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.guessBut:hover{
+    background-color: #F76B1C;
+    color: white;
+}
+
+.imgCont{
+    background-color: rgba(0, 0, 0, 0.263);
+    padding: 25px;
+    border-radius: 10px;
+    border: #F76B1C 3px solid;
+}
+
+.userInput{
+    border: 3px #F76B1C solid;
+    border-radius: 10px;
+    width: 170px;
+    height: 30px;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.hintLabel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    background-color: rgba(0, 0, 0, 0.205);
+    color: white;
+    width: 0;
+    height:0;
+    transition: width ease-in-out 1s,
+    height ease-in-out 1s;
+    text-align: center;
+    font-size: 14px;
+}
+
+.answer{
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.205);
+    padding: 7px;
+    font-size: x-large;
+    text-align: center;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 140px;
+}

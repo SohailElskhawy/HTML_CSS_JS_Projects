@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gussing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="title">
+            <h1>Guess it</h1>
+            <h4 class="userPoints">Points: 0</h4>
+        </div>
+        
+        <div class="hintCont">
+            <button class="hintButton">Hint</button>
+            <div class="hintLabel"></div>
+        </div>
+    </div>
+    <div class="choiceGameMode">
+        <h1>pick a topic</h1>
+        <button onclick="getImg('movies')">Movies</button>
+        <button onclick="getImg('games')">Games</button>
+        <button onclick="getImg('mix')">Mix</button>
+    </div>
+
+    
+    <div class="mainGame">
+        <div class="game">
+            <div class="imgCont">
+                <img class="myimg">
+            </div>
+            <div class="userinput">
+                <input type="text" class="userInput">
+                <button  class="guessBut">Guess</button>
+            </div>
+            <div class="answer" id="label">answer</div>
+        </div>
+        
+    </div>
+    
+    
+    
+    <script src="/main.js"></script>
+</body>
+</html>
