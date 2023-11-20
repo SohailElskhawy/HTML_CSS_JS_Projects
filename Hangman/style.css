@@ -119,6 +119,12 @@ body{
     display: none;
 }
 
+.word{
+    letter-spacing: 10px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
 @media only screen and (max-width: 600px){
     .mainGame{
         flex-direction: column;
