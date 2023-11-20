@@ -20,7 +20,7 @@ const options = {
 	method: 'POST',
 	headers: {
 		'content-type': 'application/x-www-form-urlencoded',
-		'X-RapidAPI-Key': 'a047aef7e3msh2051ef95ff25d98p108d3cjsn3f90ac6f2a9c',
+		'X-RapidAPI-Key': '------key----',
 		'X-RapidAPI-Host': 'robomatic-ai.p.rapidapi.com'
 	},
 	body: new URLSearchParams({
@@ -29,7 +29,7 @@ const options = {
 		cbot: '1',
 		SessionID: 'RapidAPI1',
 		cbid: '1',
-		key: 'RHMN5hnQ4wTYZBGCF3dfxzypt68rVP',
+		key: '------key----',
 		ChatSource: 'RapidAPI',
 		duration: '2'
 	})
