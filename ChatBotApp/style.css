@@ -1,0 +1,152 @@
+body{
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    row-gap: 25px;
+    margin: 0; /* Reset default margin */
+    box-sizing: border-box; /* Include padding and borders in the element's total width and height */
+}
+.logo{
+    font-family: monospace;
+    font-weight: 900;
+    font-size: 50px;
+    user-select: none;
+}
+
+.chatCont{
+    background-color: rgba(0, 0, 0, 0.226);
+    color: beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 35px;
+    border: solid ;
+}
+
+.chat{
+    padding: 10px;
+    height: 300px;
+    overflow-x: hidden;
+    margin: 5px;
+}
+
+.chat .message{
+    margin: 5px;
+    background-color: rgba(0, 0, 0, 0.501);
+    padding: 5px 35px;
+    width: 160px;
+    text-wrap: balance;
+    border: solid black;
+    border-radius: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.user{
+    position: relative;
+    right: 20px;
+}
+
+
+.userInput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    column-gap: 10px;
+}
+
+textarea{
+    border: solid;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    resize: none;
+}
+
+.userInput button{
+    font-size: 18px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .logo{
+        display: none;
+    }
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        overflow: hidden;
+    }
+    
+    .chatCont {
+        background-color: rgba(0, 0, 0, 0.226);
+        color: beige;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        padding: 20px;
+        border-radius: 0;
+        border: solid;
+        width: 100vw;
+        height: 100vh;
+        box-sizing: border-box;
+    }
+    
+    .chat {
+        padding: 10px;
+        height: 80%;
+        width: 100%; 
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .chat .message {
+        margin: 5px;
+        padding: 5px 30px;
+        max-width: 90%;
+        border-radius: 10px;
+        word-wrap: break-word; 
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .userInput{
+        align-self: flex-start;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        width: 90%;
+        padding: 5px 25px;
+
+    }
+    .userInput textarea{
+        border: solid;
+        padding: 5px;
+        width: 90%; /* Set the input width to 90% */
+        max-width: 90%; /* Set a max-width as well */
+        box-sizing: border-box; 
+    }
+    
+    textarea {
+        border: solid;
+        padding: 5px;
+        flex: 1;
+    }
+    
+    button {
+        font-size: 18px;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+    
+
+}

@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Arvo:wght@700&family=Bebas+Neue&family=Indie+Flower&family=Metal+Mania&family=Roboto:wght@300&family=Space+Mono&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    background-image: linear-gradient( 135deg, #81FBB8 10%, #28C76F 100%);
+    height: 100vh;
+}
+*{
+    font-family: 'Bebas Neue';
+    user-select: none;
+}
+.mainGame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 80px;
+}
+
+.hangMan{
+    background-color: rgba(0, 0, 0, 0.249);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hangMan .hangmanPic{
+    width: 300px;
+    height: 350px;
+    max-width: 300px;
+}
+
+.userPlayground{
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 35px;
+    background-color: rgba(0, 0, 0, 0.249);
+    padding: 15px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.keyboard{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 10px;
+}
+
+.keyboard button{
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #28C76F;
+    border: 0;
+    cursor: pointer;
+    box-shadow: 3px 2px 1px 0px;
+    text-align: center;
+}
+
+.keyboard button:hover{
+    background-color: #81FBB8;
+    color: white;
+}
+
+
+
+/* Style for the blurred background */
+.popUp {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(129, 205, 163, 0.7); /* Semi-transparent background color */
+    backdrop-filter: blur(3px); /* Apply a blur effect to the background */
+    z-index: 1; /* Ensure the pop-up is on top of everything */
+}
+
+/* Style for the pop-up message */
+.popUpMessage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: solid;
+    padding: 25px;
+    font-size: 35px;
+    background-color: #81FBB8;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.popUpMessage button {
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 15px;
+    border: 0;
+    cursor: pointer;
+    background-color: #28C76F;
+    box-shadow: 1px 1px 1px;
+}
+
+.popUpMessage button:hover {
+    background-color: #49bc7d;
+    color: white;
+}
+
+.popUp{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    .mainGame{
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .hangMan .hangmanPic{
+        width: 200px;
+        height: 175px;
+    }
+    .userPlayground{
+        font-size: large;
+    }
+    .keyboard{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+        column-gap: 20px;
+        row-gap: 15px;
+    }
+
+    .keyboard button{
+        width:25px;
+        height: 25px;
+    }
+}
