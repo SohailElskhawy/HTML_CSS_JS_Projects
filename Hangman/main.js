@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     alphabets.forEach(letter => {
         const button = document.createElement('button')
         button.className = 'letterBut';
+        button.id = letter;
         button.innerHTML = letter;
         keyboardEl.appendChild(button);
     });
@@ -21,9 +22,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     playGame();
 });
 
+
 function playGame() {
-    const word = words[Math.floor(Math.random() * words.length)];
-    console.log(word);
+    const word = words[Math.floor(Math.random() * words.length)];    
     const wordEl = document.querySelector('.word');
     wordEl.innerHTML = '';
     for(let i = 0; i<word.word.length; i++){
@@ -35,18 +36,55 @@ function playGame() {
     const keyboard = document.querySelector('.keyboard');
     const allButtons = keyboard.querySelectorAll('button');
     allButtons.forEach(but => {
-        but.setAttribute('onclick', `checkLetter('${word.word}','${but.innerHTML}')`)
+        but.setAttribute('onclick', `checkLetter('${word.word.toLowerCase()}','${but.innerHTML.toLowerCase()}')`)
     })
 }
 
 
 function checkLetter(word,letter){
+    document.getElementById(letter).disabled = true;
+    const wordEl = document.querySelector('.word');
+    let currentWord = '';
     if(!word.includes(letter)){
-        hangmanStage+=1
-        document.querySelector('.hangmanPic').src = hangmanStages[hangmanStage]
-        const keyboardEl = document.querySelector('.keyboard');
+        if (hangmanStage < hangmanStages.length - 2){
+            hangmanStage+=1
+            document.querySelector('.hangmanPic').src = hangmanStages[hangmanStage]
+        }else{
+            document.querySelector('.popUp').style.display = 'flex';
+            document.querySelector('.popUpMessage h1').innerHTML = `Game Over 😔 <br> The Word is ${word}`;
+        }
+    }else{
+        for (let i = 0; i<word.length; i++){
+            if (word[i] == letter){
+                currentWord += letter;
+            }else{
+                currentWord += wordEl.innerHTML[i];
+            }
+        }
+        wordEl.innerHTML = currentWord;
+    }
+
+    if (wordEl.innerHTML.toLowerCase() === word){
+        document.querySelector('.popUp').style.display = 'flex';
+        document.querySelector('.popUpMessage h1').innerHTML = `🥳You Won🥳`;
     }
 }
+
+
+const playAgainBut = document.querySelector('.playAgainBut');
+playAgainBut.addEventListener('click', ()=>{
+    hangmanStage = 0;
+    document.querySelector('.hangmanPic').src = hangmanStages[hangmanStage];
+    document.querySelector('.popUp').style.display = 'none';
+    const keyboardEl = document.querySelector('.keyboard');
+    const allButtons = keyboardEl.querySelectorAll('button');
+    allButtons.forEach(but => {
+        but.disabled = false;
+    })
+    playGame();
+})
+
+
 
 
 
