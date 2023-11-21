@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Arvo:wght@700&family=Bebas+Neue&family=Black+Ops+One&family=Indie+Flower&family=Merriweather:wght@900&family=Metal+Mania&family=Roboto:wght@300&family=Space+Mono&display=swap');
+
+body{
+    background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+header .logo{
+    text-align: center;
+    font-family: "Black Ops One";
+    color: white;
+    font-size: x-large;
+}
+
+header .searchBar input{
+    padding: 5px 10px;
+    width: 600px;
+    border: solid;
+    font-size: large;
+}
+
+.moviesArea {
+    padding: 15px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 7px;
+}
+
+.movieFrame {
+    position: relative;
+    background-color: white;
+    padding: 5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.moviesArea .movieFrame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.movieDetails {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 91%;
+    height: 0;
+    margin-left: 5px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: small;
+    transition: height 0.3s ease;
+    transform: translateY(100%);
+    opacity: 0;
+    font-family: "Black Ops One";
+}
+
+
+.movieOverview{
+    height: 60%;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+.movieFrame:hover .movieDetails {
+    height: 50%;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+
+/* When Movie is Pressed */
+
+
+.movieDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.movieDiv .header{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.movieDiv .header button{
+    font-family: "Black Ops One";
+    font-size: medium;
+    align-self: start;
+    border: solid;
+    border-radius: 10px;
+    cursor: pointer;
+    align-self: flex-start;
+    background-color: transparent; 
+    color: #6b8cce;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+.movieTitle {
+    font-family: "Black Ops One";
+    text-align: center;
+    margin: 0
+}
+
+.movieDiv .header button:hover{
+    background-color: #6b8cce;
+    color: white;
+}
+
+
+.movieDescrip {
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.363);
+    color: white;
+    text-align: center;
+    font-family: "Black Ops One";
+    overflow-y: auto;
+    max-height: 350px;
+}
+
+.iframeContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+iframe {
+    width: 700px;
+    height: 360px;
+}
+
+.movieDiv{
+    display: none;
+}
+/* End Here */
+
+@media only screen and (max-width: 1000px) {
+    .moviesArea {
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-left: 15px;
+    }
+
+    .movieDetails{
+        width: 88.5%;
+    }
+
+    .movieDescrip{
+        font-size: x-small;
+    }
+
+    iframe{
+        width:500px;
+        height:200px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .moviesArea {
+        grid-template-columns: 1fr;
+    }
+    .movieDetails{
+        width: 91%;
+    }
+
+    header .searchBar input {
+        padding: 5px 10px;
+        width: 90%;
+        border: solid;
+        font-size: large;
+    }
+
+
+    .movieDescrip{
+        font-size: x-small;
+    }
+    
+    iframe{
+        width:330px;
+        height:210px;
+    }
+}

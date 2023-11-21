@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -11,15 +12,27 @@
             <h1>MoviesFlex</h1>
         </div>
         <div class="searchBar">
-            <input type="text">
-            <button>Search</button>
+            <input type="text" placeholder="Movie Name" class="movieSearch" oninput="filterMovies()">
         </div>
     </header>
 
     <div class="moviesArea">
     </div>
 
-    <div class="movieDiv" style="display: none;"></div>
+    <div class="movieDiv">
+        <div class="header">
+            <button onclick="removeMovieDiv()">Back</button>
+        </div>
+        <h1 class="movieTitle">Oppenheimer</h1>
+        
+        <div class="iframeContainer">
+            <iframe width="700" height="360" src=""></iframe>
+        </div>
+        
+        <p class="movieDescrip">
+            The story of J. Robert Oppenheimer's role in the development of the atomic bomb during World War II.
+        </p>
+    </div>
     <script src="./main.js"></script>
 </body>
 </html>
