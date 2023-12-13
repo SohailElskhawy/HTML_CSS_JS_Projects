@@ -16,6 +16,7 @@ body{
 
 .calculator{
     width: 300px;
+    max-width: 300px;
     height: 500px;
     background-color: rgba(76,76,76,1);
     border-radius: 20px;
@@ -23,13 +24,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: rgba(76,76,76,1) 15px solid;
+    border: black 15px solid;
 }
 .frame{
     border: 3px solid rgba(76,76,76,1);
-    width: 470px;
+    width: 100%;
+    max-width: 100%;
     height: 500px;
-    /* padding:10px; */
     border-radius: 0px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
@@ -58,9 +59,14 @@ body{
 
 .writingPlace{
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     align-items: center;
     height: 100px;
     color: #fff;
     font-size: 40px;
+    overflow-x: auto; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
