@@ -22,7 +22,9 @@ function startGame(){
 
 }
 
-
+document.querySelector('.playButton').addEventListener('click', ()=>{
+    startGame();
+})
 
 
 playerWidth = 10;
