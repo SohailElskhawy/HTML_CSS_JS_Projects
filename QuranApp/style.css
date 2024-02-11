@@ -12,6 +12,7 @@ body{
     align-items: start;
     height: 90vh;
     margin-top: 10px;
+    margin: 0;
 }
 
 h1{
@@ -22,19 +23,24 @@ h1{
 }
 
 button{
-    padding: 10px 20px;
+    padding: 5px 10px;
     border: none;
     outline: none;
     cursor: pointer;
     background-color: #3498db;
     color: #fff;
     border-radius: 5px;
-    margin: 10px;
+    margin: 5px;
     font-size: 1rem;
 }
 
 button:hover{
     background-color: #2980b9;
+}
+
+button:disabled{
+    background-color: #bdc3c7;
+    cursor: not-allowed;
 }
 
 
@@ -67,10 +73,7 @@ button:hover{
     font-size: 2.5rem;
     font-family: "Amiri Quran", serif;
 }
-.ayahNo{
-    font-size: 1.5rem;
-    color: #3498db;
-}
+
 
 .ayahCard.active{
     display: flex;
@@ -151,4 +154,99 @@ input{
 .suraList{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+}
+
+.nextAyaButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.prevAyaButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Responsive For Phone And Tablet */
+
+@media (max-width: 900px){
+    .ayahCard{
+        max-width: 500px;
+        width: 500px;
+    }
+
+    h1{
+        font-size: 2.5rem;
+    }
+
+    .suraList{
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .ayahText{
+        font-size: 2rem;
+    }
+
+    .suraInfo{
+        width: 100%;
+    }
+
+    .suraCont{
+        column-gap: 5px;
+    }
+
+    button{
+        font-size: 0.8rem;
+    }
+
+}
+
+@media (max-width: 500px){
+    .ayahCard{
+        max-width: 250px;
+        width: 250px;
+    }
+    .ayahText{
+        font-size: 1.3rem;
+    }
+    h1{
+        font-size: 1rem;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    .suraList{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .suraInfo{
+        width: 100%;
+    }
+    .suraNum-reve{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 15px;
+    }
+
+    .suraCont{
+        column-gap: 0px;
+    }
+
+    .prevAyaButton{
+        margin: 0;
+        width: 10px;
+    }
+
+    .nextAyaButton{
+        margin: 0;
+        width: 10px;
+    }
+
+    button{
+        font-size: 0.7rem;
+    }
 }

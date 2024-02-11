@@ -157,6 +157,7 @@ async function displaySurasButtons() {
         suraButton.classList.add('suraButton');
         suraButton.textContent = sura.englishName;
         suraButton.addEventListener('click', async function() {
+            document.querySelectorAll('.suraButton').forEach(but => but.disabled = true)
             const selectedsura = await getSura(sura.number);
             console.log(selectedsura);
             await displaySura(selectedsura);
