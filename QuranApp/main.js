@@ -74,6 +74,11 @@ async function displaySura(sura) {
         const allAyas = document.querySelectorAll('.ayahCard');
         allAyas[0].querySelector('.ayahDiv .ayahText').textContent = allAyas[0].querySelector('.ayahDiv .ayahText').textContent.replace('بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ', '');
     }
+    
+    if (sura.number == 95){
+        const allAyas = document.querySelectorAll('.ayahCard');
+        allAyas[0].querySelector('.ayahDiv .ayahText').textContent = allAyas[0].querySelector('.ayahDiv .ayahText').textContent.replace('بِّسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ', '')
+    }
 
 }
 
@@ -111,7 +116,11 @@ function playAya(allAyas, currentAya) {
     }else{
         let currentAya = 0;
         allAyas[currentAya].classList.add('active');
-        allAyas[currentAya].querySelector('.playButton').textContent = 'Play';
+        document.querySelector('.nextAyaButton').style.display = 'block';
+        document.querySelector('.prevAyaButton').style.display = 'block';
+        document.querySelectorAll('.ayahCard').forEach(aya => {
+            aya.querySelector('.playButton').textContent = 'Play';
+        });
         playFullButton.style.display = 'block';
     }
 }
@@ -150,7 +159,6 @@ function replaceEnglishNumToArabic(str){
 async function displaySurasButtons() {
     const response = await fetch('https://api.alquran.cloud/v1/surah');
     const data = await response.json();
-    console.log(data);
     const suras = data.data;
     for(let sura of suras) {
         const suraButton = document.createElement('button');
