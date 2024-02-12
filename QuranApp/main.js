@@ -55,8 +55,8 @@ async function displaySura(sura) {
             } else {
                 audio.pause();
                 document.querySelector('.playFullSurahBut').style.display = 'block';
-                document.querySelector('.nextAyaButton').style.display = 'block';
-                document.querySelector('.prevAyaButton').style.display = 'block';
+                document.querySelector('.nextAyaButton').style.display = 'flex';
+                document.querySelector('.prevAyaButton').style.display = 'flex';
                 document.querySelectorAll('.ayahCard').forEach(aya => {
                     aya.querySelector('.playButton').textContent = 'Play';
                 });
@@ -116,8 +116,8 @@ function playAya(allAyas, currentAya) {
     }else{
         let currentAya = 0;
         allAyas[currentAya].classList.add('active');
-        document.querySelector('.nextAyaButton').style.display = 'block';
-        document.querySelector('.prevAyaButton').style.display = 'block';
+        document.querySelector('.nextAyaButton').style.display = 'flex';
+        document.querySelector('.prevAyaButton').style.display = 'flex';
         document.querySelectorAll('.ayahCard').forEach(aya => {
             aya.querySelector('.playButton').textContent = 'Play';
         });
