@@ -267,6 +267,7 @@ footer {
     font-size: 0.5rem;
     color: #333;
     margin-top: 30px;
+    direction: ltr;
 }
 
 footer img {
