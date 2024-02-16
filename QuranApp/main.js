@@ -5,10 +5,37 @@ const readButton = document.querySelector('.readButton');
 const suraName = document.querySelector('.suraName');
 const suraContent = document.querySelector('.suraContent');
 const suraList = document.querySelector('.suraList');
+const appLanguage = document.querySelector('.langValue');
 
 document.addEventListener('DOMContentLoaded', ()=> {
     displaySurasButtons();
+    let savedLang = localStorage.getItem('lang');
+    if(savedLang) {
+        appLanguage.value = savedLang;
+    }else{
+        appLanguage.value = 'Arabic';
+    }
+
+    if(appLanguage.value === 'Arabic') {
+        document.body.style.direction = 'rtl';
+        document.querySelector('.appName') .textContent = 'تطبيق القرآن';
+        document.querySelector('.playFullSurahBut').innerHTML = 'تشغيل السورة كاملة';
+        document.querySelector('.backButton').innerHTML = 'رجوع';
+        document.querySelector('.selectSuraText').innerHTML = 'اختر سورة';
+    }else{
+        document.body.style.direction = 'ltr';
+        document.querySelector('.appName') .textContent = 'Quran App';
+        document.querySelector('.playFullSurahBut').innerHTML = 'Play Full Surah';
+        document.querySelector('.backButton').innerHTML = 'Back';
+        document.querySelector('.selectSuraText').innerHTML = 'Select Sura';
+    }
+
 })
+
+appLanguage.addEventListener('change', ()=> {
+    localStorage.setItem('lang', appLanguage.value);
+    window.location.reload();
+});
 
 document.addEventListener('keyup', event => {
     if (event.code === 'Space') {
@@ -27,10 +54,27 @@ async function getSura(suraNumber) {
 
 async function displaySura(sura) {
     firstPage.style.display = 'none';
+    document.querySelector('header').style.display = 'none';
+    document.body.style.direction = 'ltr';
+    document.querySelector('.suraInfo').style.direction = 'rtl';
     secondPage.style.display = 'block';
-    suraName.textContent = sura.englishName;
-    document.querySelector('.numOfAyas').innerHTML = `Number of Ayas: ${sura.numberOfAyahs}`;
-    document.querySelector('.suraRevelation').innerHTML = `Revelation Type: ${sura.revelationType}`;
+    if(appLanguage.value === 'Arabic') {
+        suraName.textContent = sura.name;
+        let revelationType;
+        if(sura.revelationType === 'Meccan') {
+            revelationType = 'مكية';
+        }else if(sura.revelationType === 'Medinan') {
+            revelationType = 'مدنية';
+        }
+        document.querySelector('.numOfAyas').innerHTML = `عدد الآيات: ${sura.numberOfAyahs}`;
+        document.querySelector('.suraRevelation').innerHTML = `نوع الوحي: ${revelationType}`;
+    }else{
+        suraName.textContent = sura.englishName;
+        document.querySelector('.numOfAyas').innerHTML = `Number of Ayas: ${sura.numberOfAyahs}`;
+        document.querySelector('.suraRevelation').innerHTML = `Revelation Type: ${sura.revelationType}`;
+    }
+
+    
     const ayahs = sura.ayahs;
     for(let ayah of ayahs) {
         const ayahCard = document.createElement('div');
@@ -47,11 +91,19 @@ async function displaySura(sura) {
         ayahCard.appendChild(audio);
         const playButton = document.createElement('button');
         playButton.classList.add('playButton');
-        playButton.textContent = 'Play';
+        if(appLanguage.value === 'Arabic') {
+            playButton.textContent = 'تشغيل';
+        }else{
+            playButton.textContent = 'Play';
+        }
         playButton.addEventListener('click', function() {
             if(audio.paused) {
                 audio.play();
+                if(appLanguage.value === 'Arabic') {
+                    playButton.textContent = 'إيقاف';
+                }else{
                 playButton.textContent = 'Pause';
+                }
             } else {
                 audio.pause();
                 document.querySelector('.playFullSurahBut').style.display = 'block';
@@ -163,7 +215,11 @@ async function displaySurasButtons() {
     for(let sura of suras) {
         const suraButton = document.createElement('button');
         suraButton.classList.add('suraButton');
-        suraButton.textContent = sura.englishName;
+        if(appLanguage.value === 'Arabic') {
+            suraButton.textContent = sura.name;
+        }else{
+            suraButton.textContent = sura.englishName;
+        }
         suraButton.addEventListener('click', async function() {
             document.querySelectorAll('.suraButton').forEach(but => but.disabled = true)
             const selectedsura = await getSura(sura.number);
